@@ -94,6 +94,10 @@ header {
 main {
     padding: 0.5rem;
     grid-area: main;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
 }
 
 footer {
