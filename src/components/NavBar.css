@@ -9,15 +9,18 @@ header > div {
 }
 
 header > nav {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 1fr));
     gap: 1rem;
 }
 
-header > nav > ul {
-    margin: 0;
+header > nav > button {
+    text-align: center;
+    white-space: nowrap;
+    padding: 0.5rem;
 }
 
-header > nav:hover,
-header > nav > ul:hover {
-    cursor: pointer;
+button {
+    text-align: center;
 }

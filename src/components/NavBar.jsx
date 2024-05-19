@@ -7,11 +7,13 @@ function NavBar()
         <>
             <h1>Simulador Tienda Havanna</h1>
             <nav>
-                <ul>CATEGORIAS 🔽</ul>
-                <div>CONTACTO</div>
-                <div>AYUDA</div>
+                <button>Alfajores</button>
+                <button>Havannets</button>
+                <button>Galletitas</button>
+                <button>Chocolates</button>
+                <button>Contacto</button>
+                <CartWidget />
             </nav>
-            <CartWidget />
         </>
     )
 }

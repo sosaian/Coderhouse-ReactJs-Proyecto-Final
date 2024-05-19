@@ -4,7 +4,7 @@ function CartWidget()
 {
     return (
         <>
-            <div>🛒<span>1</span></div>
+            <button>🛒<span>1</span></button>
         </>
     )
 }
