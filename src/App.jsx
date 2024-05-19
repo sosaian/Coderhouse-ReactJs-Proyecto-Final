@@ -9,7 +9,7 @@ function App() {
         <NavBar/>
       </header>
       <main>
-        <ItemListContainer/>
+        <ItemListContainer greeting={"¡UPS! Parece que no hay productos disponibles ahora..."}/>
       </main>
       <footer>
         REACT JS | Coderhouse | Pre-entrega 1 | Ian Sosa
