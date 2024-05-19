@@ -96,8 +96,9 @@ main {
     grid-area: main;
     height: 100%;
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {

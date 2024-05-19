@@ -1,5 +1,6 @@
 import './App.css'
 import NavBar from './components/NavBar.jsx'
+import ItemListContainer from './components/ItemListContainer.jsx'
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
         <NavBar/>
       </header>
       <main>
-        ( main )
+        <ItemListContainer/>
       </main>
       <footer>
         REACT JS | Coderhouse | Pre-entrega 1 | Ian Sosa

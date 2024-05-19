@@ -1,0 +1,45 @@
+#listadoProductos {
+    padding: 0.5rem;
+    grid-area: productos;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    max-height: 100%;
+}
+
+#listadoProductos > li {
+    padding: 0.5rem;
+    width: 15rem;
+    height: 20rem;
+    list-style-type: none;
+    border: 0.1rem solid var(--clr-secondary);
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#listadoProductos > li > :nth-child(2) {
+    height: 2rlh;
+}
+
+#listadoProductos > li > input {
+    padding: 0.5rem min(20%, 3rem);
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+    border: 0.1rem solid var(--clr-secondary);
+    border-radius: 0.5rem;
+}
+
+#listadoProductos > li > input:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
+    cursor: pointer;
+}
