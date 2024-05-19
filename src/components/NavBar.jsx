@@ -1,4 +1,5 @@
 import './NavBar.css'
+import CartWidget from './CartWidget.jsx'
 
 function NavBar()
 {
@@ -10,6 +11,7 @@ function NavBar()
                 <div>CONTACTO</div>
                 <div>AYUDA</div>
             </nav>
+            <CartWidget />
         </>
     )
 }

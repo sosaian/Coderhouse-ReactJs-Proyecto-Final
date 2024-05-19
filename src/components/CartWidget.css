@@ -1,0 +1,9 @@
+div:has(> span) {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+div:has(> span):hover {
+    background-color: var(--clr-accent);
+    cursor: pointer;
+}
