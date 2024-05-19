@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5rem solid #f2f2f2;
+}
+
+header > div {
+    font-weight: bolder;
+}
+
+header > nav {
+    display: flex;
+    gap: 1rem;
+}
+
+header > nav > ul {
+    margin: 0;
+}
+
+header > nav:hover,
+header > nav > ul:hover {
+    cursor: pointer;
+}

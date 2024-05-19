@@ -1,10 +1,11 @@
 import './App.css'
+import NavBar from './components/NavBar.jsx'
 
 function App() {
   return (
     <>
       <header>
-        ( header )
+        <NavBar/>
       </header>
       <main>
         ( main )
