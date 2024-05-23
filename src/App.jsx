@@ -12,7 +12,7 @@ function App() {
         <ItemListContainer greeting={"¡UPS! Parece que no hay productos disponibles ahora..."}/>
       </main>
       <footer>
-        REACT JS | Coderhouse | Pre-entrega 1 | Ian Sosa
+        REACT JS | Coderhouse | Pre-entrega 2 | Ian Sosa
       </footer>
     </>
   )
