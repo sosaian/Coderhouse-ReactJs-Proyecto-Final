@@ -11,7 +11,9 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<ItemListContainer greeting={"¡UPS! Parece que no hay productos disponibles ahora..."}/>} />
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/Contacto" element={<h2>Página aún en construcción...</h2>} />
+          <Route path="*" element={<h2>¡UPS! Esa página no existe...</h2>} />
         </Routes>
       </main>
       <footer>
