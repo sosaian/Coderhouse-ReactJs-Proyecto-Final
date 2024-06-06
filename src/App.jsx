@@ -4,6 +4,9 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
+  const WIP_MESSAGE = "Página aún en construcción..."
+  const ERROR_MESSAGE = "¡UPS! Esa página no existe..."
+
   return (
     <BrowserRouter>
       <header>
@@ -12,8 +15,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/Contacto" element={<h2>Página aún en construcción...</h2>} />
-          <Route path="*" element={<h2>¡UPS! Esa página no existe...</h2>} />
+          <Route path="/Contacto" element={<h2>{WIP_MESSAGE}</h2>} />
+          <Route path="*" element={<h2>{ERROR_MESSAGE}</h2>} />
         </Routes>
       </main>
       <footer>
