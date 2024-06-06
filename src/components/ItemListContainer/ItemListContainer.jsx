@@ -3,7 +3,7 @@ import { getProductList } from '../../data/async-mock.js'
 import { useEffect, useState } from 'react'
 import { ItemList } from '../ItemList/ItemList.jsx'
 
-function ItemListContainer()
+export function ItemListContainer()
 {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
@@ -23,5 +23,3 @@ function ItemListContainer()
         </>
     )
 }
-
-export default ItemListContainer
