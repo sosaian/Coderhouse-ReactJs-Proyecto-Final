@@ -100,13 +100,25 @@ const PRODUCT_LIST = [
     }
 ]
 
-export function getProductList()
+export function getProductList(categoryId)
 {
+    const filterProductList = () => {
+        if (!categoryId)
+        {
+            return PRODUCT_LIST;
+        }
+        else
+        {
+            const FILTER_RESULT = PRODUCT_LIST.filter(product => product.category === categoryId);
+            return FILTER_RESULT.length > 0 ? FILTER_RESULT : null;
+        }
+    }
+
     return new Promise((resolve, reject) => {    
         setTimeout(() => {
             const REJECT_MESSAGE =  "¡UPS! Parece que no hay productos disponibles ahora...";
-
-            PRODUCT_LIST.length > 0 ? resolve(PRODUCT_LIST) : reject(REJECT_MESSAGE)
+            
+            PRODUCT_LIST.length > 0 ? resolve(filterProductList) : reject(REJECT_MESSAGE)
         }, 2000)
     })
 } 

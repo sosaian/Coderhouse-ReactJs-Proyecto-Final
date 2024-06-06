@@ -15,6 +15,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
           <Route path="/Contacto" element={<h2>{WIP_MESSAGE}</h2>} />
           <Route path="*" element={<h2>{ERROR_MESSAGE}</h2>} />
         </Routes>
