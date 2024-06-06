@@ -7,6 +7,8 @@ function ItemListContainer()
 {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
+    const GREETING = "Cargando productos..."
+    const ERROR_MESSAGE = "¡UPS! Parece que no hay productos disponibles ahora..."
 
     useEffect(() => {
         getProductList()
@@ -17,7 +19,7 @@ function ItemListContainer()
 
     return (
         <>
-            {loading ? <h2>Cargando productos...</h2> : (products ? <ItemList products={products} /> : <h2>¡UPS! Parece que no hay productos disponibles ahora...</h2>)}
+            {loading ? <h2>{GREETING}</h2> : (products ? <ItemList products={products} /> : <h2>{ERROR_MESSAGE}</h2>)}
         </>
     )
 }
