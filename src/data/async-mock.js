@@ -94,4 +94,16 @@ export function getProductList(categoryId)
             PRODUCT_LIST.length > 0 ? resolve(filterProductList) : reject(REJECT_MESSAGE)
         }, 2000)
     })
-} 
+}
+
+export function getProduct(itemId)
+{
+    return new Promise((resolve, reject) => {
+        
+        const PRODUCT_INDEX = PRODUCT_LIST.findIndex(product => product.id === itemId);
+        
+        const REJECT_MESSAGE =  "¡UPS! Ese item no existe...";
+
+        PRODUCT_INDEX > -1 ? resolve(PRODUCT_LIST[PRODUCT_INDEX]) : reject(REJECT_MESSAGE)
+    })
+}
