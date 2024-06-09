@@ -1,17 +1,4 @@
-#listadoProductos {
-    padding: 0.5rem;
-    grid-area: productos;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
-    max-height: 100%;
-}
-
-#listadoProductos > li {
+#productList > li {
     padding: 0.5rem;
     width: 15rem;
     height: 20rem;
@@ -26,19 +13,24 @@
     align-items: center;
 }
 
-#listadoProductos > li > :nth-child(2) {
+#productList > li > :nth-child(2) {
     height: 2rlh;
 }
 
-#listadoProductos > li > input {
-    padding: 0.5rem min(20%, 3rem);
+#productList > li > a {
+    display: grid;
+    place-items: center;
+    height: 3rem;
+    width: 6rem;
     background-color: var(--clr-secondary);
     color: var(--clr-primary);
-    border: 0.1rem solid var(--clr-secondary);
     border-radius: 0.5rem;
+    border: none;
+    outline: 0.1rem solid var(--clr-secondary);
+    text-decoration: none;
 }
 
-#listadoProductos > li > input:hover {
+#productList > li > a:hover {
     background-color: var(--clr-primary);
     color: var(--clr-secondary);
     cursor: pointer;

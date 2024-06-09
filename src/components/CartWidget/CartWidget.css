@@ -1,6 +1,9 @@
 button:has(> span) {
-    padding: 1rem;
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--clr-secondary);
     border-radius: 0.5rem;
+    border: none;
     position: relative;
 }
 
