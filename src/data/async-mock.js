@@ -5,10 +5,7 @@ const PRODUCT_LIST = [
         "name": "ALFAJORES MAR DEL PLATA x 8un.",
         "price": 16500.00,
         "stock": 1,
-        "img": {
-            "default": "https://placehold.co/75x100",
-            "thumbnail": "https://placehold.co/50x75"
-        }
+        "img": "https://placehold.co/75x100",
     },
     {
         "id": 2,
@@ -16,10 +13,7 @@ const PRODUCT_LIST = [
         "name": "ALFAJORES SUPER DULCE DE LECHE x 9un.",
         "price": 18500.00,
         "stock": 20,
-        "img": {
-            "default": "https://placehold.co/75x100",
-            "thumbnail": "https://placehold.co/50x75"
-        }
+        "img": "https://placehold.co/75x100"
     },
     {
         "id": 3,
@@ -27,10 +21,7 @@ const PRODUCT_LIST = [
         "name": "ALFAJORES 70% CACAO PURO X 9 uds",
         "price": 18500.00,
         "stock": 9,
-        "img": {
-            "default": "https://placehold.co/75x100",
-            "thumbnail": "https://placehold.co/50x75"
-        }
+        "img": "https://placehold.co/75x100"
     },
     {
         "id": 4,
@@ -38,10 +29,7 @@ const PRODUCT_LIST = [
         "name": "ALFAJORES CHOCOLATE x 12 uds",
         "price": 16500.00,
         "stock": 7,
-        "img": {
-            "default": "https://placehold.co/75x100",
-            "thumbnail": "https://placehold.co/50x75"
-        }
+        "img": "https://placehold.co/75x100"
     },
     {
         "id": 5,
@@ -49,10 +37,7 @@ const PRODUCT_LIST = [
         "name": "ALFAJORES CHOCOLATE x 6 uds",
         "price": 8500.00,
         "stock": 5,
-        "img": {
-            "default": "https://placehold.co/75x100",
-            "thumbnail": "https://placehold.co/50x75"
-        }
+        "img": "https://placehold.co/75x100"
     },
     {
         "id": 6,
@@ -60,10 +45,7 @@ const PRODUCT_LIST = [
         "name": "ALFAJORES MIXTOS CLÁSICOS x 6 uds",
         "price": 8500.00,
         "stock": 2,
-        "img": {
-            "default": "https://placehold.co/75x100",
-            "thumbnail": "https://placehold.co/50x75"
-        }
+        "img": "https://placehold.co/75x100"
     },
     {
         "id": 7,
@@ -71,10 +53,7 @@ const PRODUCT_LIST = [
         "name": "ALFAJORES MIXTOS CLÁSICOS x 12 uds",
         "price": 16500.00,
         "stock": 3,
-        "img": {
-            "default": "https://placehold.co/75x100",
-            "thumbnail": "https://placehold.co/50x75"
-        }
+        "img": "https://placehold.co/75x100"
     },
     {
         "id": 8,
@@ -82,10 +61,7 @@ const PRODUCT_LIST = [
         "name": "MINI ALFAJORES MIXTOS DE CHOCOLATE x 475g",
         "price": 18500.00,
         "stock": 20,
-        "img": {
-            "default": "https://placehold.co/75x100",
-            "thumbnail": "https://placehold.co/50x75"
-        }
+        "img": "https://placehold.co/75x100"
     },
     {
         "id": 9,
@@ -93,10 +69,7 @@ const PRODUCT_LIST = [
         "name": "MINI ALFAJORES x 475g",
         "price": 18500.00,
         "stock": 10,
-        "img": {
-            "default": "https://placehold.co/75x100",
-            "thumbnail": "https://placehold.co/50x75"
-        }
+        "img": "https://placehold.co/75x100"
     }
 ]
 
