@@ -7,9 +7,9 @@ export function Item({ id, category, img, name, price })
         <>
             <li>
                 <div>{category}</div>
-                <img src={img.default} />
+                <img src={img} />
                 <div>{name}</div>
-                <div>{price}</div>
+                <div>{`$ ${price}`}</div>
                 <Link to={`/item/${id}`}>
                     <button>Ver Detalle</button>
                 </Link>
