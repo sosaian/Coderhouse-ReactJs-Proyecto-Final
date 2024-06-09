@@ -1,3 +1,4 @@
+import './ItemDetail.css'
 import { ItemCount } from '../ItemCount/ItemCount.jsx'
 import { useState } from 'react'
 
@@ -14,14 +15,14 @@ export function ItemDetail({ item })
 
     return(
         <>  
-            <div>
+            <div className="itemDetail">
                 <div>
-                    <img src={item.img} />
+                    <img src={item.imgDetail} />
                 </div>
                 <div>
                     <h2>{item.name}</h2>
-                    <div>{`$ ${item.price}`}</div>
-                    <div>{`Stock actual: ${item.stock}`}</div>
+                    <h3>{`$ ${item.price}`}</h3>
+                    <p>{`Stock actual: ${item.stock}`}</p>
                     <ItemCount quantity={quantity} handleClick={handleClick} />
                     <button>Agregar al carrito</button>
                 </div>
