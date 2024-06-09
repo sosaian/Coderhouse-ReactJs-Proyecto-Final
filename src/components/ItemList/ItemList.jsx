@@ -8,8 +8,7 @@ export function ItemList({ products })
             {products.map((p) =>
                 <Item key={p.id}
                     id={p.id}
-                    category={p.category}
-                    img={p.img}
+                    img={p.imgThumbnail}
                     name={p.name}
                     price={p.price} />)}
         </ul>
