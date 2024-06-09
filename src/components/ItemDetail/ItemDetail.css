@@ -1,0 +1,35 @@
+.itemDetail {
+    display: flex;
+    width: 80vw;
+    gap: none;
+}
+
+.itemDetail > div:first-child {
+    display: grid;
+    place-items: center;
+    width: 50%;
+}
+
+.itemDetail > div:last-child {
+    padding: 1rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.itemDetail > div:last-child > button {
+    height: 3rem;
+    width: 9rem;
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+    border-radius: 0.5rem;
+    border: none;
+    outline: 0.1rem solid white;
+    }
+
+.itemDetail > div:last-child > button:hover {
+    background-color: var(--clr-accent);
+    cursor: pointer;
+}

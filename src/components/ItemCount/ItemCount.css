@@ -1,0 +1,25 @@
+#itemCount {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#itemCount > button {
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+    border-radius: 0.5rem;
+    border: none;
+    outline: 0.1rem solid white;
+}
+
+#itemCount > div {
+    width: 2ch;
+    text-align: center;
+}
+    
+#itemCount > button:hover {
+    background-color: var(--clr-accent);
+    cursor: pointer;
+}
