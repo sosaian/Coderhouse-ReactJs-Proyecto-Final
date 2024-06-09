@@ -9,9 +9,7 @@ export function Item({ id, img, name, price })
                 <img src={img} />
                 <div>{name}</div>
                 <div>{`$ ${price}`}</div>
-                <Link to={`/item/${id}`}>
-                    <button>Ver Detalle</button>
-                </Link>
+                <Link to={`/item/${id}`}>Ver Detalle</Link>
             </li>
         </>
     )

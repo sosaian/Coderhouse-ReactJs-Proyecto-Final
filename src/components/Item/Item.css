@@ -17,15 +17,20 @@
     height: 2rlh;
 }
 
-#productList > li > input {
-    padding: 0.5rem min(20%, 3rem);
+#productList > li > a {
+    display: grid;
+    place-items: center;
+    height: 3rem;
+    width: 6rem;
     background-color: var(--clr-secondary);
     color: var(--clr-primary);
-    border: 0.1rem solid var(--clr-secondary);
     border-radius: 0.5rem;
+    border: none;
+    outline: 0.1rem solid var(--clr-secondary);
+    text-decoration: none;
 }
 
-#productList > li > input:hover {
+#productList > li > a:hover {
     background-color: var(--clr-primary);
     color: var(--clr-secondary);
     cursor: pointer;
