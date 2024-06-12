@@ -23,7 +23,7 @@ function App() {
         </Routes>
       </main>
       <footer>
-        REACT JS | Coderhouse | Pre-entrega 2 | Ian Sosa
+        REACT JS | Coderhouse | Proyecto Final | Ian Sosa
       </footer>
     </BrowserRouter>
   )
