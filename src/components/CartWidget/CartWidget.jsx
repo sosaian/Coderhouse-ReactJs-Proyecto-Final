@@ -1,12 +1,14 @@
 import './CartWidget.css'
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 
-function CartWidget()
+export function CartWidget()
 {
+    const { cart, showCartProducts } = useContext(CartContext)
+
     return (
         <>
-            <button>🛒<span>1</span></button>
+            <button onClick={showCartProducts}>🛒<span>{cart.length}</span></button>
         </>
     )
 }
-
-export default CartWidget
