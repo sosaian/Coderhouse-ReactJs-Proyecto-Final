@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 
 export function ItemListContainer()
 {
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState()
     const [loading, setLoading] = useState(true)
     const GREETING = "Cargando productos..."
     const ERROR_MESSAGE = "¡UPS! Parece que no hay productos disponibles ahora..."
@@ -21,9 +21,11 @@ export function ItemListContainer()
         return setLoading(true);
     }, [categoryId])
 
-    return (
-        <>
-            {loading ? <h2>{GREETING}</h2> : (products ? <ItemList products={products} /> : <h2>{ERROR_MESSAGE}</h2>)}
-        </>
-    )
+    if (loading)
+        return <h2>{GREETING}</h2>
+
+    if (products)
+        return <ItemList products={products} />
+
+    return <h2>{ERROR_MESSAGE}</h2>
 }
