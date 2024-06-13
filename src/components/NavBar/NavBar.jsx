@@ -22,7 +22,7 @@ export function NavBar()
                 <NavLink to={'/category/Chocolates'} className={({ isActive }) => isActive ? "active" : ""}>
                     Chocolates
                 </NavLink>
-                <NavLink to={'/Contacto'} className={({ isActive }) => isActive ? "active" : ""}>
+                <NavLink to={'/contact'} className={({ isActive }) => isActive ? "active" : ""}>
                     Contacto
                 </NavLink>
             </nav>
