@@ -17,9 +17,8 @@ export function ItemDetailContainer()
             })
     }, [])
     
-    return(
-        <>
-            {product_info ? <ItemDetail item={product_info}/> : <h2>¡UPS! Ese producto no existe...</h2>}
-        </>
-    )
+    if (product_info)
+        return <ItemDetail item={product_info}/>
+
+    return <h2>¡UPS! Ese producto no existe...</h2>
 }
