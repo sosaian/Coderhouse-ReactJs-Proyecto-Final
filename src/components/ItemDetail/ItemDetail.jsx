@@ -1,10 +1,12 @@
 import './ItemDetail.css'
 import { ItemQuantitySelector } from '../ItemQuantitySelector/ItemQuantitySelector.jsx'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { CartContext } from '../../context/CartContext.jsx'
 
 export function ItemDetail({ item })
 {
     const [quantity, setQuantity] = useState(1)
+    const { addToCart } = useContext(CartContext)
 
     const handleClick = (mode) => {
         if (mode === "plus" && item.stock > quantity)
@@ -24,7 +26,7 @@ export function ItemDetail({ item })
                     <h3>{`$ ${item.price}`}</h3>
                     <p>{`Stock actual: ${item.stock}`}</p>
                     <ItemQuantitySelector quantity={quantity} handleClick={handleClick} />
-                    <button>Agregar al carrito</button>
+                    <button onClick={() => addToCart({...item, quantity: 1})}>Agregar al carrito</button>
                 </div>
             </div>
         </>
