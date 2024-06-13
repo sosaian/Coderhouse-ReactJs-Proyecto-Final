@@ -1,5 +1,5 @@
 import './ItemDetail.css'
-import { ItemCount } from '../ItemCount/ItemCount.jsx'
+import { ItemQuantitySelector } from '../ItemQuantitySelector/ItemQuantitySelector.jsx'
 import { useState } from 'react'
 
 export function ItemDetail({ item })
@@ -23,7 +23,7 @@ export function ItemDetail({ item })
                     <h2>{item.name}</h2>
                     <h3>{`$ ${item.price}`}</h3>
                     <p>{`Stock actual: ${item.stock}`}</p>
-                    <ItemCount quantity={quantity} handleClick={handleClick} />
+                    <ItemQuantitySelector quantity={quantity} handleClick={handleClick} />
                     <button>Agregar al carrito</button>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import './ItemCount.css'
+import './ItemQuantitySelector.css'
 
 export function ItemCount({ quantity, handleClick })
 {
