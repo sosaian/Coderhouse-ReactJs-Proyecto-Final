@@ -1,9 +1,9 @@
 import './ItemQuantitySelector.css'
 
-export function ItemCount({ quantity, handleClick })
+export function ItemQuantitySelector({ quantity, handleClick })
 {
     return(
-        <div id="itemCount">
+        <div id="itemQuantitySelector">
             <button onClick={() => handleClick("minus")}>➖</button>
             <div>{quantity}</div>
             <button onClick={() => handleClick("plus")}>➕</button>
