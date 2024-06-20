@@ -8,6 +8,8 @@ export function ItemDetailContainer()
 {
     const itemId = useParams().itemId
     const [product_info, setProductInfo] = useState()
+    const [loading, setLoading] = useState(true)
+    const GREETING = "Cargando productos..."
 
     useEffect(() => {
         const PRODUCT_REF = doc(db, "products", itemId)
@@ -17,8 +19,14 @@ export function ItemDetailContainer()
                 snapshot.exists() && setProductInfo({ id: snapshot.id, ...snapshot.data() })
             })
             .catch( error => console.error(error))
+            .finally(() => setLoading(false))
+
+        return setLoading(true)
     }, [])
     
+    if (loading)
+        return <h2>{GREETING}</h2>
+
     if (product_info)
         return <ItemDetail item={product_info}/>
 
