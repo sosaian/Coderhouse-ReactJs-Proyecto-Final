@@ -12,6 +12,7 @@ header > nav {
 }
 
 header > nav > a {
+    color: var(--clr-secondary);
     height: 3rem;
     min-width: 6rem;
     display: grid;
