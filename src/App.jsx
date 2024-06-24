@@ -4,6 +4,7 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartComponentContext } from './context/CartContext.jsx'
+import { CartItemListContainer } from './components/CartItemListContainer/CartItemListContainer.jsx'
 
 function App() {
   const WIP_MESSAGE = "Página aún en construcción..."
@@ -21,7 +22,7 @@ function App() {
             <Route path="/category/:categoryId" element={<ItemListContainer />} />
             <Route path="/item/:itemId" element={<ItemDetailContainer />} />
             <Route path="/contact" element={<h2>{WIP_MESSAGE}</h2>} />
-            <Route path="/cart" element={<h2>{WIP_MESSAGE}</h2>} />
+            <Route path="/cart" element={<CartItemListContainer />} />
             <Route path="*" element={<h2>{ERROR_MESSAGE}</h2>} />
           </Routes>
         </main>
