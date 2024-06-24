@@ -18,12 +18,18 @@ export const CartComponentContext = ({ children }) => {
         }
     }
 
+    const removeFromCart = (product) => {
+        const PRODUCT_INDEX = cart.findIndex(cart_product => cart_product.id === product.id)
+        
+        PRODUCT_INDEX === 1 ? console.log("ERROR") : setCart(cart.splice(index, 1))
+    }
+
     const showCartProducts = () => {
         console.log(cart);
     }
 
     return (
-        <CartContext.Provider value={ { cart, addToCart, showCartProducts } }>
+        <CartContext.Provider value={ { cart, addToCart, removeFromCart, showCartProducts } }>
             {children}
         </CartContext.Provider>
     )
