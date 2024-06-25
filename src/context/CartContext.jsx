@@ -24,12 +24,16 @@ export const CartComponentContext = ({ children }) => {
         PRODUCT_INDEX === 1 ? console.log("ERROR") : setCart(cart.splice(index, 1))
     }
 
+    const emptyCart = () => {
+        setCart([])
+    }
+
     const showCartProducts = () => {
         console.log(cart);
     }
 
     return (
-        <CartContext.Provider value={ { cart, addToCart, removeFromCart, showCartProducts } }>
+        <CartContext.Provider value={ { cart, addToCart, removeFromCart, emptyCart, showCartProducts } }>
             {children}
         </CartContext.Provider>
     )
