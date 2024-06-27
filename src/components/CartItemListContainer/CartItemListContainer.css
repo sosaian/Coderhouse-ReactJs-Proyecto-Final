@@ -1,0 +1,51 @@
+#cartItemList + div {
+    align-self: start;
+    
+    width: 25%;
+    padding: 0.5rem;
+    border: 0.1rem solid var(--clr-secondary);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#cartItemList + div > :nth-child(2) > * {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Este es el color del "GRATIS" en el costo de envío */
+#cartItemList + div > :nth-child(2) > *:nth-child(2) > span { color: var(--clr-accent); }
+
+#cartItemList + div > :nth-child(3) {
+    align-self: center;
+    height: 3rem;
+    width: 9rem;
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
+    border-radius: 0.5rem;
+    border: none;
+}
+
+#cartItemList + div > :last-child {
+    height: 3rem;
+    width: 100%;
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+    border-radius: 0.5rem;
+    border: none;
+    outline: 0.1rem solid white;
+}
+
+#cartItemList + div > :nth-child(3):hover {
+    background-color: red;
+    color: var(--clr-primary);
+    cursor: pointer;
+}
+
+#cartItemList + div > :last-child:hover {
+    background-color: var(--clr-accent);
+    cursor: pointer;
+}
