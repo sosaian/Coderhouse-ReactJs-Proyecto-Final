@@ -26,7 +26,7 @@ export function ItemDetail({ item })
                     <h3>{`$ ${item.price}`}</h3>
                     <p>{`Stock actual: ${item.stock}`}</p>
                     <ItemQuantitySelector quantity={quantity} handleClick={handleClick} />
-                    <button onClick={() => addToCart({...item, quantity: 1})}>Agregar al carrito</button>
+                    <button onClick={() => addToCart({...item, quantity: quantity})}>Agregar al carrito</button>
                 </div>
             </div>
         </>
