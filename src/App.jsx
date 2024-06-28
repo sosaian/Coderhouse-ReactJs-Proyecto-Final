@@ -23,6 +23,7 @@ function App() {
             <Route path="/item/:itemId" element={<ItemDetailContainer />} />
             <Route path="/contact" element={<h2>{WIP_MESSAGE}</h2>} />
             <Route path="/cart" element={<CartItemListContainer />} />
+            <Route path="/checkout" element={WIP_MESSAGE} />
             <Route path="*" element={<h2>{ERROR_MESSAGE}</h2>} />
           </Routes>
         </main>
