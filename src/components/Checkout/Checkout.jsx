@@ -79,11 +79,14 @@ export function Checkout()
 
         const DATE = new Date().toISOString() // Creo y convierto la fecha al estándar ISO8601
 
+        //  Intencionalmente evito cargar NAME, SURNAME y EMAIL para evitar exponer información sensible
+        //  con este proyecto que no es real ni puedo asegurar la correcta manipulación de datos en la DB
+
         const ORDER = {
             buyer: {
-                name: NAME,
-                surname: SURNAME,
-                email: EMAIL
+                name: "Test",
+                surname: "User",
+                email: "name@example.com"
             },
             items: cart,
             date: DATE,
