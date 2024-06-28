@@ -2,6 +2,7 @@ import './CartItemListContainer.css'
 import { CartContext } from '../../context/CartContext'
 import { CartItemList } from '../CartItemList/CartItemList'
 import { useContext, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export function CartItemListContainer()
 {
@@ -20,16 +21,6 @@ export function CartItemListContainer()
         setProductsAmount(getProductsAmount)
     }, [cart])
 
-    const createOrder = () => {
-        const ORDER = {
-            buyer: { name: "Juan", phone: "123-456789", email: "name@example.com"},
-            cart: [...cart],
-            total
-        }
-        
-        console.log(ORDER)
-    }
-
     const ERROR_MESSAGE = "¡UPS! Parece que no hay productos disponibles ahora..."
 
     if (cart.length === 0)
@@ -46,7 +37,7 @@ export function CartItemListContainer()
                     <h2>Total<span>{`$ ${total}`}</span></h2>
                 </div>
                 <button onClick={emptyCart}>VACIAR CARRITO</button>
-                <button onClick={createOrder}>COMPRAR</button>
+                <Link to={'/checkout'}><button>COMPRAR</button></Link>
             </div>
         </>
     ) 
