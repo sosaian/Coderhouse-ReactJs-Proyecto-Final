@@ -29,7 +29,7 @@
     border: none;
 }
 
-#cartItemList + div > :last-child {
+#cartItemList + div > a > :last-child {
     height: 3rem;
     width: 100%;
     background-color: var(--clr-secondary);
@@ -45,7 +45,7 @@
     cursor: pointer;
 }
 
-#cartItemList + div > :last-child:hover {
+#cartItemList + div > a > :last-child:hover {
     background-color: var(--clr-accent);
     cursor: pointer;
 }
