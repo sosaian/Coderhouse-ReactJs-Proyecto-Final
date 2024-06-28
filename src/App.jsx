@@ -5,6 +5,7 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartComponentContext } from './context/CartContext.jsx'
 import { CartItemListContainer } from './components/CartItemListContainer/CartItemListContainer.jsx'
+import { Checkout } from './components/Checkout/Checkout.jsx'
 
 function App() {
   const WIP_MESSAGE = "Página aún en construcción..."
@@ -23,7 +24,7 @@ function App() {
             <Route path="/item/:itemId" element={<ItemDetailContainer />} />
             <Route path="/contact" element={<h2>{WIP_MESSAGE}</h2>} />
             <Route path="/cart" element={<CartItemListContainer />} />
-            <Route path="/checkout" element={WIP_MESSAGE} />
+            <Route path="/checkout" element={<Checkout />} />
             <Route path="*" element={<h2>{ERROR_MESSAGE}</h2>} />
           </Routes>
         </main>
