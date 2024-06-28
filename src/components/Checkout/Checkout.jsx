@@ -1,10 +1,14 @@
 import './Checkout.css'
 import { CartContext } from '../../context/CartContext'
 import { useContext, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { collection, addDoc } from 'firebase/firestore'
+import { db } from '../../firebase/client'
 
 export function Checkout()
 {
-    const { cart } = useContext(CartContext)
+    const { cart, emptyCart } = useContext(CartContext)
+    const navigateTo = useNavigate()
 
     const PRODUCTS_AMMOUNT = cart.reduce((accumulator, product) => accumulator + product.quantity, 0)
     const TOTAL = cart.reduce((accumulator, product) => accumulator + (product.price * product.quantity), 0)
@@ -93,7 +97,17 @@ export function Checkout()
             total: TOTAL
         }
 
-        console.log(ORDER)
+        const orderCollection = collection(db, 'orders')
+        addDoc(orderCollection, ORDER).then(({id}) => {
+            
+            alert(`COMPRA EXITOSA, el ID de tu compra es el siguiente\n${id}`)
+    
+            console.log(id)
+    
+            emptyCart()
+    
+            navigateTo('/')
+        })
     }
 
     return (
