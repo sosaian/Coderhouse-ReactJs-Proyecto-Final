@@ -28,12 +28,26 @@ export const CartComponentContext = ({ children }) => {
         setCart([])
     }
 
+    const modifyProductQuantity = (id, newQuantity) => {
+        const PRODUCT_INDEX = cart.findIndex(cart_product => cart_product.id === id)
+
+        if (PRODUCT_INDEX === -1)
+        {
+            console.log("ERROR: PRODUCT_INDEX not found.");
+            return cart;
+        }
+
+        const MODIFIED_CART = [...cart]
+        MODIFIED_CART[PRODUCT_INDEX].quantity = newQuantity
+        setCart(MODIFIED_CART)
+    }
+
     const showCartProducts = () => {
         console.log(cart);
     }
 
     return (
-        <CartContext.Provider value={ { cart, addToCart, removeFromCart, emptyCart, showCartProducts } }>
+        <CartContext.Provider value={ { cart, addToCart, removeFromCart, emptyCart, modifyProductQuantity, showCartProducts } }>
             {children}
         </CartContext.Provider>
     )
