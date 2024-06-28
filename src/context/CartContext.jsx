@@ -20,8 +20,22 @@ export const CartComponentContext = ({ children }) => {
 
     const removeFromCart = (product) => {
         const PRODUCT_INDEX = cart.findIndex(cart_product => cart_product.id === product.id)
+
+        if (PRODUCT_INDEX === -1)
+        {
+            console.error("ERROR: No hay un producto con ese ID.")
+            return
+        }
+
+        if (cart.length === 1)
+        {
+            setCart([])
+            return
+        }
         
-        PRODUCT_INDEX === 1 ? console.log("ERROR") : setCart(cart.splice(index, 1))
+        const MODIFIED_CART = [...cart]
+        MODIFIED_CART.splice(PRODUCT_INDEX, 1)
+        setCart(MODIFIED_CART)
     }
 
     const emptyCart = () => {
