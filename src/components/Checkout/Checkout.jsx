@@ -11,6 +11,59 @@ export function Checkout()
 
     const FORM_REF = useRef(null)
 
+    const validateEmail = (email) => {
+        /*
+            Es importante tener en cuenta que no cubre todos los casos posibles y específicos definidos por
+            los estándares de correos electrónicos (RFC 5322), pero es adecuado para la mayoría de los
+            propósitos comunes.
+        */
+
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        /* 
+            Desglose de la Expresión Regular
+                ^: Comienzo de la línea.
+                [^\s@]+: Uno o más caracteres que no son espacios en blanco ni '@'.
+                @: Exactamente un símbolo '@'.
+                [^\s@]+: Uno o más caracteres que no son espacios en blanco ni '@'.
+                \.: Exactamente un punto '.'.
+                [^\s@]+: Uno o más caracteres que no son espacios en blanco ni '@'.
+                $: Fin de la línea.
+        */
+
+        return regex.test(email);
+    }
+
+    const validateForm = (name, surname, email) => {        
+        if (name === "")
+        {
+            console.log("ERROR: El campo 'Nombre' NO puede estar vacío.")
+            return false
+        }
+
+        if (surname === "")
+        {
+            console.log("ERROR: El campo 'Apellido' NO puede estar vacío.")
+            return false
+        }
+        
+        /*
+            Uno podría a priori hacer una restricción en los campos "name" y "surname" para evitar números
+            o caracteres especiales como signos de exclamación u otros, pero la realidad es que en la
+            actualidad existen nombres que contienen números, por ejemplo el polémico caso de uno de los
+            hijos de Elon Musk, "X Æ A-12". Y también otros casos como ocurren en la lengua Khoisan donde se
+            utiliza el signo "ǃ" para denotar un clic dental (similar a un chasquido).
+        */
+
+        if (validateEmail(email) === false)
+        {
+            console.log("ERROR: El correo electrónico ingresado no es válido.")
+            return false
+        }
+
+        return true
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault()
 
@@ -20,6 +73,9 @@ export function Checkout()
         const NAME = FORM_REF.current.children[0].elements[0].value.trim()
         const SURNAME = FORM_REF.current.children[0].elements[1].value.trim()
         const EMAIL = FORM_REF.current.children[0].elements[2].value // En HTML5 aplica trim() nativamente
+
+        if (validateForm(NAME, SURNAME, EMAIL) === false) // validateForm() se encarga del UX del error
+            return
 
         const DATE = new Date().toISOString() // Creo y convierto la fecha al estándar ISO8601
 
