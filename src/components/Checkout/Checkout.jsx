@@ -1,6 +1,6 @@
 import './Checkout.css'
 import { CartContext } from '../../context/CartContext'
-import { useContext, useRef } from 'react'
+import { useContext, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { collection, addDoc } from 'firebase/firestore'
 import { db } from '../../firebase/client'
@@ -68,8 +68,11 @@ export function Checkout()
         return true
     }
 
+    const [paymentInProcess, setPaymentInProcess] = useState(false)
+
     const handleSubmit = (event) => {
         event.preventDefault()
+        setPaymentInProcess(true)
 
         //  Otra forma de tener estos valores es con useState() pero lo hago de esta forma
         //  para solamente asignar los valores al momento del submit y no 'onChange'
@@ -129,7 +132,7 @@ export function Checkout()
                         <input id="formEmail" type="email" placeholder="sosaian@proton.me" required />
                     </div>
                 </fieldset>
-                <button id="formSubmit" type="submit">FINALIZAR COMPRA</button>
+                <button id="formSubmit" type="submit">{paymentInProcess ? "AGUARDA UNOS INSTANTES": "FINALIZAR COMPRA"}</button>
             </form>
             <div id="checkoutTotal">
                 <div>
