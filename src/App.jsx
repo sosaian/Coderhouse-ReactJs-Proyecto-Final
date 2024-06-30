@@ -13,7 +13,7 @@ function App() {
 
   return (
     <CartComponentContext>
-      <BrowserRouter>
+      <BrowserRouter basename="/ProyectoFinalSOSA/">
         <header>
           <NavBar/>
         </header>
