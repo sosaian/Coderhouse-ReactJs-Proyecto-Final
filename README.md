@@ -1,6 +1,6 @@
 # Acerca del proyecto 👀
 
-> Este es el proyecto final que hice para el curso de React JS en Coderhouse. Se trata de un ecommerce inspirado en la tienda online de Havanna ( https://tienda.havanna.com.ar/ )
+> Este es el proyecto final que hice para el curso de React JS en Coderhouse. Se trata de un ecommerce conectado con Firebase para hacer uso de Firestore para el manejo de productos y creación de registros de compras.
 
 ## Instalación usando git clone 🔧
 
