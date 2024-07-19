@@ -101,12 +101,8 @@ export const CartComponentContext = ({ children }) => {
         setCart(MODIFIED_CART)
     }
 
-    const showCartProducts = () => {
-        console.log(cart);
-    }
-
     return (
-        <CartContext.Provider value={ { cart, addToCart, removeFromCart, emptyCart, modifyProductQuantity, showCartProducts } }>
+        <CartContext.Provider value={ { cart, addToCart, removeFromCart, emptyCart, modifyProductQuantity } }>
             {children}
         </CartContext.Provider>
     )
