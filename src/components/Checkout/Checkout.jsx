@@ -72,18 +72,19 @@ export function Checkout()
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        setPaymentInProcess(true)
-
+        
         //  Otra forma de tener estos valores es con useState() pero lo hago de esta forma
         //  para solamente asignar los valores al momento del submit y no 'onChange'
-
+        
         const NAME = FORM_REF.current.children[0].elements[0].value.trim()
         const SURNAME = FORM_REF.current.children[0].elements[1].value.trim()
         const EMAIL = FORM_REF.current.children[0].elements[2].value // En HTML5 aplica trim() nativamente
-
+        
         if (validateForm(NAME, SURNAME, EMAIL) === false) // validateForm() se encarga del UX del error
             return
-
+        
+        setPaymentInProcess(true)
+        
         const DATE = new Date().toISOString() // Creo y convierto la fecha al estándar ISO8601
 
         //  Intencionalmente evito cargar NAME, SURNAME y EMAIL para evitar exponer información sensible
