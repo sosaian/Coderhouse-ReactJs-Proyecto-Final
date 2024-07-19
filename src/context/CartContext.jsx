@@ -24,14 +24,15 @@ export const CartComponentContext = ({ children }) => {
             timer: 3000,
             timerProgressBar: true,
             didOpen: (toast) => {
-              toast.onmouseenter = Swal.stopTimer;
-              toast.onmouseleave = Swal.resumeTimer;
+                toast.onmouseenter = Swal.stopTimer
+                toast.onmouseleave = Swal.resumeTimer
             }
-          });
-          Toast.fire({
+        })
+
+        Toast.fire({
             icon: "success",
             title: `¡${product.quantity === 1 ? "Producto añadido" : "Productos añadidos"} correctamente al carrito!`
-          });
+        })
     }
 
     const removeFromCart = (product, moreThanOne) => {
