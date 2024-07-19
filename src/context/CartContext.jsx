@@ -13,7 +13,7 @@ export const CartComponentContext = ({ children }) => {
         else
         {
             const MODIFIED_CART = [...cart]
-            MODIFIED_CART[PRODUCT_INDEX].quantity += 1
+            MODIFIED_CART[PRODUCT_INDEX].quantity += ( product.quantity || 1 )
             setCart(MODIFIED_CART)
         }
     }
