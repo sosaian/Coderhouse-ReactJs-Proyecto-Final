@@ -28,7 +28,7 @@ export function CartItem({ id, img, name, price, stock, quantity })
                 <img src={img} />
                 <div>
                     <h3>{name}</h3>
-                    <button onClick={() => {removeFromCart({id})}}>✖ Eliminar</button>
+                    <button onClick={() => {removeFromCart({id}, quantity > 1)}}>✖ Eliminar</button>
                 </div>
                 <div>
                     <ItemQuantitySelector quantity={quantity} handleClick={handleClick} />

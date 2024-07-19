@@ -34,7 +34,7 @@ export const CartComponentContext = ({ children }) => {
           });
     }
 
-    const removeFromCart = (product) => {
+    const removeFromCart = (product, moreThanOne) => {
         const PRODUCT_INDEX = cart.findIndex(cart_product => cart_product.id === product.id)
 
         if (PRODUCT_INDEX === -1)
@@ -52,9 +52,26 @@ export const CartComponentContext = ({ children }) => {
         const MODIFIED_CART = [...cart]
         MODIFIED_CART.splice(PRODUCT_INDEX, 1)
         setCart(MODIFIED_CART)
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "bottom-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer
+                toast.onmouseleave = Swal.resumeTimer
+            }
+        })
+
+        Toast.fire({
+            icon: "success",
+            title: `¡${moreThanOne ? "Productos eliminados" : "Producto eliminado"} correctamente del carrito!`
+        })
     }
 
-    const emptyCart = () => {
+    const emptyCart = () => { 
         setCart([])
     }
 
