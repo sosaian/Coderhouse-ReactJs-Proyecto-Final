@@ -103,14 +103,13 @@ export function Checkout()
 
         const orderCollection = collection(db, 'orders')
         addDoc(orderCollection, ORDER).then(({id}) => {
-            
-            alert(`COMPRA EXITOSA, el ID de tu compra es el siguiente\n${id}`)
-    
-            console.log(id)
-    
             emptyCart()
-    
-            navigateTo('/')
+            
+            Swal.fire({
+                title: "COMPRA EXITOSA",
+                html: `El ID de tu compra es el siguiente:<br>${id}<br>También será enviado al correo electrónico.`,
+                icon: "success"
+            }).then(() => navigateTo('/'))
         })
     }
 

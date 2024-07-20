@@ -73,18 +73,7 @@ export const CartComponentContext = ({ children }) => {
     }
 
     const emptyCart = () => { 
-        Swal.fire({
-            title: "Estás por vaciar el carrito... ¿Continuar?",
-            showDenyButton: true,
-            showCancelButton: false,
-            confirmButtonText: "Si, vaciar el carrito.",
-            denyButtonText: "No, mantener el carrito."
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire("¡Carrito eliminado correctamente!", "", "success")
-                setCart([])
-            }
-        })
+        setCart([])
     }
 
     const modifyProductQuantity = (id, newQuantity) => {
