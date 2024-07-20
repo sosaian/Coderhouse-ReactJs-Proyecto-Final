@@ -40,7 +40,7 @@ export const CartComponentContext = ({ children }) => {
 
         if (PRODUCT_INDEX === -1)
         {
-            console.error("ERROR: No hay un producto con ese ID.")
+            Swal.fire("ERROR: No hay un producto con ese ID.", "", "error")
             return
         }
 
@@ -81,8 +81,8 @@ export const CartComponentContext = ({ children }) => {
 
         if (PRODUCT_INDEX === -1)
         {
-            console.log("ERROR: PRODUCT_INDEX not found.");
-            return cart;
+            Swal.fire("ERROR: PRODUCT_INDEX inválido.", "", "error")
+            return cart
         }
 
         const MODIFIED_CART = [...cart]
