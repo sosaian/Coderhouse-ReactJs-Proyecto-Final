@@ -41,13 +41,13 @@ export function Checkout()
     const validateForm = (name, surname, email) => {        
         if (name === "")
         {
-            console.log("ERROR: El campo 'Nombre' NO puede estar vacío.")
+            Swal.fire("ERROR: El campo 'Nombre' NO puede estar vacío.", "", "error")
             return false
         }
 
         if (surname === "")
         {
-            console.log("ERROR: El campo 'Apellido' NO puede estar vacío.")
+            Swal.fire("ERROR: El campo 'Apellido' NO puede estar vacío.", "", "error")
             return false
         }
         
@@ -61,7 +61,7 @@ export function Checkout()
 
         if (validateEmail(email) === false)
         {
-            console.log("ERROR: El correo electrónico ingresado no es válido.")
+            Swal.fire("ERROR: El correo electrónico ingresado no es válido.", "", "error")
             return false
         }
 
