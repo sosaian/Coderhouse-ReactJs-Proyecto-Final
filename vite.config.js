@@ -6,7 +6,7 @@ config()
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/ProyectoFinalSOSA/',
+  base: '/Coderhouse-ReactJs-Proyecto-Final/',
   plugins: [react()],
 
   define: {

@@ -13,7 +13,7 @@ function App() {
 
   return (
     <CartComponentContext>
-      <BrowserRouter basename="/ProyectoFinalSOSA/">
+      <BrowserRouter basename="/Coderhouse-ReactJs-Proyecto-Final/">
         <header>
           <NavBar/>
         </header>
