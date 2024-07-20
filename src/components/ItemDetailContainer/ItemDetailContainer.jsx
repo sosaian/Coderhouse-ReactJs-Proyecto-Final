@@ -18,7 +18,7 @@ export function ItemDetailContainer()
             .then( snapshot => {
                 snapshot.exists() && setProductInfo({ id: snapshot.id, ...snapshot.data() })
             })
-            .catch( error => console.error(error))
+            .catch( error => Swal.fire(error, "", "error") )
             .finally(() => setLoading(false))
 
         return setLoading(true)

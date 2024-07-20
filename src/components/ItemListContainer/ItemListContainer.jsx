@@ -30,7 +30,7 @@ export function ItemListContainer()
 
         getDocs(products_ref)
             .then(response => setProducts(response.docs.map((doc) => ( {...doc.data(), id: doc.id}))))
-            .catch(err => console.error(err))
+            .catch(err => Swal.fire(err, "", "error"))
             .finally(() => setLoading(false))
 
         return setLoading(true);
